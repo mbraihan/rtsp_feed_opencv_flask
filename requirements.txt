@@ -1,0 +1,10 @@
+Flask
+opencv-python
+opencv-contrib-python
+flask_swagger_ui
+pytest-mock
+urllib3
+requests
+Jinja2
+Flask-Cors
+helper
