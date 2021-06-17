@@ -12,7 +12,7 @@ from imutils.video import VideoStream
 
 # * ---------- Create App --------- *
 app = Flask(__name__)
-CORS(app, support_credentials=True)
+# CORS(app)
 
 
 # rtsp_url = "rtsp://admin:Experts@2021!@@24.186.96.191:554/ch01/0"
@@ -47,7 +47,7 @@ def gen_frames():
 
 
 @app.route('/rtsp_feed', methods=['GET'])
-@cross_origin(supports_credentials=True)
+# @cross_origin(supports_credentials=True)
 def rtsp_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
@@ -55,22 +55,22 @@ def rtsp_feed():
 # * ---------- Get home information ---------- *
 
 @app.route('/', methods=['GET'])
-@cross_origin(supports_credentials=True)
+# @cross_origin(supports_credentials=True)
 def index():
     return render_template('index.html')
 
 @app.route('/products-training', methods=['GET'])
-@cross_origin(supports_credentials=True)
+# @cross_origin(supports_credentials=True)
 def productsTraining():
     return render_template('productsTraining.html')
 
 @app.route('/new-station', methods=['GET'])
-@cross_origin(supports_credentials=True)
+# @cross_origin(supports_credentials=True)
 def newStation():
     return render_template('newStation.html')
 
 @app.route('/my-account', methods=['GET'])
-@cross_origin(supports_credentials=True)
+# @cross_origin(supports_credentials=True)
 def myAccount():
     return render_template('myAccount.html')
 
