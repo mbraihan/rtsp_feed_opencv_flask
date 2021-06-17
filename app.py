@@ -2,7 +2,7 @@ from flask import Flask, render_template, Response
 from flask_cors import CORS, cross_origin
 import urllib
 import os
-import helper
+# import helper
 import re
 from urllib.request import urlopen
 from flask import jsonify
@@ -76,4 +76,5 @@ def myAccount():
 
 
 if __name__ == '__main__':
-    app.run(host = '0.0.0.0', port = 8889, debug=True, ssl_context='adhoc')
+#     app.run(host = '0.0.0.0', port = 8889, debug=True, ssl_context='adhoc')
+    app.run(host = '0.0.0.0', port = 8889, debug=True)
